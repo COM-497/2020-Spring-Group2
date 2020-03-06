@@ -7,18 +7,23 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/animate.css">
     <title>Our Products</title>
     <style>
       .media {
       image-rendering: center;
-      background-color:black;
-      color: white;
+      background-color:#F6F6F6;
+      color: black;
       margin: 50px;
       padding: 75px; }
 
 
     </style>
+
+  <script src="js/wow.min.js"> </script>
+  <script>
+    new WOW().init();
+  </script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -47,16 +52,17 @@
     
       &nbsp;
 
+      <div class="title wow bounceInUp">
       <h1><center>Products</center></h1>
-
+</div>
       &nbsp;
 
 
       <ul class="list-unstyled">
         <li class="media">
-          <div class="media-body">
-          <img class="mr-3" src="..." alt="Generic placeholder image">
           
+          <img class="mr-3" src="..." alt="Generic placeholder image">
+          <div class="media-body">
             
             <h5 class="mt-0 mb-1">TeamSENTINEL</h5>
             Extreme RF stare bandwidth, signal processing and recording capactiy (ELF through SFH)
@@ -65,13 +71,13 @@
         </li>
         
         <li class="media my-4">
-          <div id= "middlebox">
+          
           <img class="mr-3" src="..." alt="Generic placeholder image">
           <div class="media-body">
             <h5 class="mt-0 mb-1">TeamSENTINEL</h5>
             Optimized for maximum bandwidth where SWAP and transportability are priorities
           </div>
-        </div>
+        
         </li>
         
         <li class="media">

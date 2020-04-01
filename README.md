@@ -1,4 +1,5 @@
-# 2020-Spring-Group2
-March 31st- Working on connecting the ContactUs.html form to the server with the .post method 
-
-https://www.youtube.com/watch?v=JpcLd5UrDOQ&app=desktop
+# 2020-Spring-Group
+April 1st-
+SetUp Server Data -> Email 
+ Deciding to use MailGun or NodeMailer
+ Implement the Captcha 

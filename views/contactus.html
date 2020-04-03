@@ -134,7 +134,7 @@
                   <!--Grid column-->
                   <div class="col-md-12">
                       <div class="md-form">
-                          <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                          <textarea type="text" id="text" name="text" rows="2" class="form-control md-textarea"></textarea>
                           <label for="message">Your Message</label>
                       </div>
                   </div>
@@ -188,13 +188,13 @@
         const name = $('#name').val().trim();
         const email = $('#email').val().trim();
         const subject = $('#subject').val().trim();
-        const message = $('#message').val().trim();
+        const text = $('#text').val().trim();
 //consolidate values into one object: data 
         const data = {
             name,
             email,
             subject,
-            message
+            text
         };
         //post request method 
         //data is sent over to sever with route /email 

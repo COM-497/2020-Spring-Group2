@@ -10,12 +10,12 @@ auth: {
 }
 });
 
-const sendMail = (email, subject, text, cb) => {
+const sendMail = (email, subject, text, name, cb) => {
     const mailOptions = {
         from: email,
         to: 'espycorp923@gmail.com',
-        subject:subject,
-        text: text, email
+        subject: subject,
+        text: "Name: " + name + "Email: " + email + "Message: " + text
     
     };
 

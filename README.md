@@ -9,3 +9,10 @@ Kyle is working on creating the other webpages such as contact, about us, and th
 **UPDATED on March 24th 
 Christine is working on finding a server, potentially ASW for easy website and database connectivity 
 Kyle & Patrick are working on finishing the web design: merging both of our work, adding marketing documents, and more details 
+
+**April 6th Update
+Patrick is working on the login page. He is testing using MongoDB database. 
+
+Youtube video tutorial: https://www.youtube.com/watch?v=6FOq4cUdH8k
+
+Example github: https://github.com/bradtraversy/node_passport_login

@@ -16,3 +16,24 @@ Patrick is working on the login page. He is testing using MongoDB database.
 Youtube video tutorial: https://www.youtube.com/watch?v=6FOq4cUdH8k
 
 Example github: https://github.com/bradtraversy/node_passport_login
+
+
+# 2020-Spring-Group
+To-Do List April 9th: 
+
+For Login- 
+ Finish Defining Schema
+ Style the Dashboard with HTML/CSS 
+ Uploading the PDFs to Dashboard, controlling with IFs based on user credentials defined in Schema 
+ Fix Footer 
+ 
+ For ContactUs-
+ Implement Spam Control- I am Not A Robot Button
+ Fix Footer
+ 
+ For HomePage/Products/Our Team- 
+ Fix the CSS styling and ensure it is ready to go 
+ 
+ Upload to server and ensure wesbite is functional- Moving the domain?
+ 
+ Write the Technical Paper on the Website Project 

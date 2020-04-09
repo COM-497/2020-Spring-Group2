@@ -1,5 +1,19 @@
 # 2020-Spring-Group
-April 1st-
-SetUp Server Data -> Email. 
- Deciding to use MailGun or NodeMailer.
- Implement the Captcha 
+To-Do List April 9th: 
+
+For Login- 
+ Finish Defining Schema
+ Style the Dashboard with HTML/CSS 
+ Uploading the PDFs to Dashboard, controlling with IFs based on user credentials defined in Schema 
+ Fix Footer 
+ 
+ For ContactUs-
+ Implement Spam Control- I am Not A Robot Button
+ Fix Footer
+ 
+ For HomePage/Products/Our Team- 
+ Fix the CSS styling and ensure it is ready to go 
+ 
+ Upload to server and ensure wesbite is functional- Moving the domain?
+ 
+ Write the Technical Paper on the Website Project 

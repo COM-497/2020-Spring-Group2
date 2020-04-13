@@ -1,7 +1,35 @@
-<h1 class="mt-4">Dashboard</h1>
-<p class="lead mb-3">Welcome <%= user.name %></p>
-<p class="lead mb-3"> <%= user.purchased %></p>
-<p class="lead mb-3"> <%= user._customerID %></p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/"><img src="/images/Espy_Many-Layers.png" style="height: 60px;">
+        </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <a class="nav-item nav-link active" style = "margin-left:30px" >Welcome <%= user.name %><span class="sr-only">(current)</span></a>
+       <div class="navbar-nav ml-auto" style = "margin-right:30px">
+        <a class="nav-item nav-link" href="/users/logout">Logout</a>
+        </div>
+    </div>
+  </nav>
+
+    <div class="jumbotron jumbotron-fluid" style="margin:50px">
+        <h1 class="display-4" style="text-align:center;">Display of Purchased Product</h1>
+        <hr class="my-4">
+        <div style="text-align: center;">
+        <p>TEXT TEXT TEXT</p>
+        <p class="lead">
+          <a class="btn btn-secondary btn-lg" href="#" role="button">Learn more</a>
+        </p>
+      </div>
+    </div>
+
+ 
 
 
-<a href="/users/logout" class="btn btn-secondary">Logout</a>
+
+
+<script>
+    if(user.purchased == "True"){
+        return showPurchase
+    }
+</script>

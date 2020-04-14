@@ -1,18 +1,19 @@
 # 2020-Spring-Group
 To-Do List April 15th: 
 
-For Login- 
- Christine: Finish Defining Schema
- All: Style the Dashboard with HTML/CSS 
- Patrick: Uploading the PDFs to Dashboard, controlling with IFs based on user credentials defined in Schema 
- Patrick: Fix Footer 
+#For Login- 
+ *Christine: Finish Defining Schema
+ *All: Style the Dashboard with HTML/CSS 
+ *Patrick: Uploading the PDFs to Dashboard, controlling with IFs based on user credentials defined in Schema 
+ *Patrick: Fix Footer 
  
- For HomePage/Products/Our Team- 
+ #For HomePage/Products/Our Team- 
  Kyle: Fix the CSS styling and ensure it is ready to go 
  
- Christine: Upload to server and ensure wesbite is functional
- 
- All: Write the Technical Paper on the Website Project 
+ #Server
+ *Christine: Upload to server and ensure wesbite is functional
+ #Paper 
+ *All: Write the Technical Paper on the Website Project 
 
 
 

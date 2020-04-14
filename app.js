@@ -8,6 +8,10 @@ const passport = require('passport');
 const flash = require('connect-flash');
 const session = require('express-session');
 const app = express();
+const bodyParser = require('body-parser');
+const request = require('request');
+const fetch = require('node-fetch');
+const { stringify } = require('querystring');
 
 // Passport Config
 require('./config/passport')(passport);
@@ -79,6 +83,39 @@ app.post('/email',(req,res) => {
   //  return res.redirect('/contact-success'); 
 });
 
+//Spam Controller
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
+app.post('/subscribe', (req,res) => {
+  if(
+    req.body.captcha === undefined || 
+    req.body.captcha === '' ||
+    req.body.captcha === null
+  ){
+    return res.json({"success": false, "msg": "Please Select Captcha"});
+  }
+  // Secret Key
+    const secretKey = '6LeaMukUAAAAAPy9Pqjq5a09oGIQ5SF3IQGUr2qd';
+    //verify URL
+    const query = stringify({
+      secret: secretKey,
+      response: req.body.captcha,
+      remoteip: req.connection.remoteAddress
+    });
+    const verifyURL = `https://google.com/recaptcha/api/siteverify?${query}`;
+    const body = fetch(verifyURL).then(res => res.json());
+
+    // If not successful
+    if (body.success !== undefined && !body.success)
+      return res.json({ success: false, msg: 'Failed captcha verification' });
+  
+    // If successful
+    return res.json({ success: true, msg: 'Your Message has been recorded.' });
+});
+
+
+//
+
 var path1 = __dirname + '/views/';
 
 app.use('/',router);
@@ -109,9 +146,6 @@ app.get('/contactus',function(req,res){
 //router.get('/login',function(req,res){
   //  res.sendFile(path1+'login.html');
 //});
-
-
-
 
 
 app.listen(3000,function(){

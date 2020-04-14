@@ -1,15 +1,11 @@
 # 2020-Spring-Group
-To-Do List April 9th: 
+To-Do List April 15th: 
 
 For Login- 
  Finish Defining Schema
  Style the Dashboard with HTML/CSS 
  Uploading the PDFs to Dashboard, controlling with IFs based on user credentials defined in Schema 
  Fix Footer 
- 
- For ContactUs-
- Implement Spam Control- I am Not A Robot Button
- Fix Footer
  
  For HomePage/Products/Our Team- 
  Fix the CSS styling and ensure it is ready to go 

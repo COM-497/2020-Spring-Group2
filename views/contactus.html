@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Contact Us</title>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 
     <style>
       
@@ -77,29 +78,20 @@
         </ul>
       </div>
     </nav>
-   <!-- <div class="jumbotron jumbotron-fluid" style="background: white;">
-      <div class="container">
-        <h1 class="h1-responsive font-weight-bold text-center my-4" style="margin-left: 5px;padding-bottom: 0px;">Contact Us</h1>
-        <p class="lead" style="text-align: right;"> Phone Number</p>
-        <p class="lead" style="text-align: right;"> Email Address</p>
-      </div> 
-      <div class="jumbotron jumbotron-fluid" style="background: white;">
-        <div class="container" >
-          <h1 class="display-4" style="padding-bottom: 0px;"></h1>
-          <p class="lead" style="text-align:right;"> Email Adress </p>
-          <p class="lead" style="text-align: right;"> Phone Number</p>
-        </div> -->
-
+  
+        <div id="page-container" style ="position:relative;
+        min-height: 100vh;">
+       <div id="content-wrap" style="margin-top:50px;">
 <section class="mb-4">
   <!--Section heading-->
   <h2 class="h1-responsive font-weight-bold text-center my-4">Contact Us</h2>
   <!--Section description-->
   <p class="text-center w-responsive mx-auto mb-5"></p>
-  <div class="row">
+  <div class="row" style="padding: 20px;">
       <!--Grid column-->
       <div class="col-md-10 mb-md-1 mb-4 " style="text-align: center;">
         <!--<form id="form" name="form" action="/email" method="POST"-->
-          <form >
+          <form id="subscribeForm">
               <!--Grid row-->
               <div class="row" style="margin-left: 200px;">
                   <!--Grid column-->
@@ -139,20 +131,24 @@
                       </div>
                   </div>
               </div>
+              <div class="g-recaptcha" data-sitekey="6LeaMukUAAAAAGHYjljcgI4xcixt4x0CgqiQI7kd"></div>
               <!--Grid row-->
       <input type="submit" value="Submit">
       <!--    <div class="text-center text-md-left" style="margin-left:250px;">
               <a class="btn btn-secondary"style="color:#f6f6f6" button type="submit" id="submit" value="submit">Submit</a>
           <div class="status"></div>
         </div> -->
-  </div>
+      </form></div>   
+</div>
 </section>
-  </form>
 
 
+</div>
 
        
-        <footer class="py-4 bg-dark">
+        <footer class="py-4 bg-dark" style=" position: absolute;
+        bottom: 0;
+        width: 100%;">
             <div class="container">
   <div class="row">
     <div class="col-sm" >
@@ -170,6 +166,7 @@
 </div>
              
             </div>
+        
            
           </footer>
  
@@ -177,6 +174,7 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
  <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+ 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -204,5 +202,28 @@
 
       });;
     </script>
-       
+
+    <!--Implementation of Spam Controller-->
+    <script>
+      document.getElementById('subscribeForm').addEventListener('submit', e => {
+        e.preventDefault();
+
+        const name = document.querySelector('#name').value;
+        const email = document.querySelector('#email').value;
+        const captcha = document.querySelector('#g-recaptcha-response').value;
+
+        return fetch('/subscribe', {
+          method: 'POST',
+          headers: { 'Content-type': 'application/json' },
+          body: JSON.stringify({ name, email, captcha })
+        })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data);
+            alert(data.msg);
+            if (data.success) return location.reload();
+          });
+      });
+    </script>
+    
       </body> </html>

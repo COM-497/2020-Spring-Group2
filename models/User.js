@@ -19,14 +19,48 @@ const UserSchema = new mongoose.Schema({
   },
   purchased: {
     type: Boolean,
-    default: true
+    default: false
   },
   _customerID: {
     type: String,
     default: true
   },
-
-
+ TeamSENTINEL: {
+    type: Boolean,
+    default: false
+  },
+  TeamSENTINEL_nano: {
+    type: Boolean,
+    default: false
+  },
+  TeamSENTINEL_mini: {
+    type: Boolean,
+    default: false
+  },
+  TeamSENTINEL_micro: {
+    type: Boolean,
+    default: false
+  },
+  TeamSOIGNE: {
+    type: Boolean,
+    default: false
+  },
+  Wire_Gen2_Antenna: {
+    type: Boolean,
+    default: false
+  },
+  Toadstool_Antenna: {
+    type: Boolean,
+    default: false
+  },
+  TriStar_Antenna: {
+    type: Boolean,
+    default: false
+  },
+  Fractal_Antenna: {
+    type: Boolean,
+    default: false
+  },
 });
 
 const User = mongoose.model('User', UserSchema);

@@ -2,7 +2,6 @@
 To-Do List April 15th: 
 
 #For Login- 
- *Christine: Finish Defining Schema
  *All: Style the Dashboard with HTML/CSS 
  *Patrick: Uploading the PDFs to Dashboard, controlling with IFs based on user credentials defined in Schema 
  *Patrick: Fix Footer 

@@ -2,10 +2,8 @@
 To-Do List April 15th: 
 
 For Login- 
- Finish Defining Schema
  Style the Dashboard with HTML/CSS 
  Uploading the PDFs to Dashboard, controlling with IFs based on user credentials defined in Schema 
- Fix Footer 
  Add email to company when new user created
  
  For HomePage/Products/Our Team- 

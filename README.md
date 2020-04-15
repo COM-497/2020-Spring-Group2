@@ -6,6 +6,7 @@ For Login-
  Style the Dashboard with HTML/CSS 
  Uploading the PDFs to Dashboard, controlling with IFs based on user credentials defined in Schema 
  Fix Footer 
+ Add email to company when new user created
  
  For HomePage/Products/Our Team- 
  Fix the CSS styling and ensure it is ready to go 

@@ -1,0 +1,83 @@
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/"><img src="/images/Espy_Many-Layers.png" style="height: 60px;">
+        </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <a class="nav-item nav-link active" style = "margin-left:30px; font-size: 20px;" >The Espy Corporation<span class="sr-only">(current)</span></a>
+       <div class="navbar-nav ml-auto" style = "margin-right:30px">
+        <a class="nav-item nav-link" href="/users/logout">Logout</a>
+        </div>
+    </div>
+  </nav>
+<br>
+<br>
+
+<h2><center>Welcome, <%=user.name%></center></h2>
+<br>
+<br>
+
+<div id="Display">
+  <div>
+    <iframe width="700" height="700" align="right" name="Frame" id="Frame" src="/images/Espy_Many-Layers.png"></iframe>
+
+  </div>
+
+  <div class="jumbotron jumbotron-fluid" style="background-color:#F6F6F6;font-family:  Arial, Helvetica, sans-serif; height: 700px;">
+
+      <h1 class="display-10" style="text-align: center; font-size:30px;">Product Specifications</h1>
+      <p class="lead"style="text-align: center" ></p>
+      <br>
+      <%if(user.TeamSENTINEL){ %>
+    <a href="/Locked/TeamSENTINEL.pdf"target="Frame" style="margin-left: 50px;">TeamSENTINEL Digital RF Server</a>
+    <br>
+    <br>
+    <% } %>
+    <%if(user.TeamSOIGNE){ %>
+    <a href="/Locked/Soigne.pdf" target="Frame" style="margin-left: 50px;">TeamSOIGNE Client Workstations</a>
+    <br>
+    <br>
+    <% } %>
+    <%if(user.TeamSENTINEL_micro){ %>
+    <a href="/Locked/Micro.pdf" target="Frame" style="margin-left: 50px;">TeamSENTINELmicro GEN2</a>
+    <br>
+    <br>
+    <% } %>
+    <%if(user.TeamSENTINEL_mini){ %>
+    <a href="/Locked/Mimo.pdf" target="Frame" style="margin-left: 50px;">Mimo: N-Channel Super-Resolution HF/DF Sensors</a>
+    <br>
+    <br>
+    <% } %>
+    <%if(user.TeamSENTINEL_nano){ %>
+    <a href="/Locked/Nano.pdf" target="Frame" style="margin-left: 50px;">TeamSENTINELnano GEN2</a>
+    <br>
+    <br>
+    <% } %>
+    <%if(user.Toadstool_Antenna){ %>
+    <a href="/Locked/Toadstool.pdf" target="Frame" style="margin-left: 50px;">ToadStool V/UHF-DF Antennas</a>
+    <br>
+    <br>
+    <% } %>
+    <%if(user.TriStar_Antenna){ %>
+    <a href="/Locked/tri-star.pdf" target="Frame" style="margin-left: 50px;">TriStar V/UHF-DF Antennas</a>
+    <br>
+    <br>
+    <% } %>
+    <%if(user.Wire_Gen2_Antenna){ %>
+    <a href="/Locked/Wire.pdf" target="Frame" style="margin-left: 50px;">TeamSENTINEL Wire-3.0G GEN2 Antenna</a>
+    <br>
+    <br>
+    <% } %>
+  </div>
+  <%if(user.purchased){ %>
+    <div class="jumbotron jumbotron-fluid" style="background-color:#F6F6F6; font-family:  Arial, Helvetica, sans-serif; ">
+       
+          <h1 class="display-10" style="text-align: center; font-size:30px;">SharePoint Access</h1>
+          <p class="lead"style="text-align: center" >Click <a href=" https://espy.sharepoint.com/" target="_blank">here</a> to view your Microsoft SharePoint Account to access documentation and help with your products.</p>
+      </div>
+      <% } %>
+    </div>
+     
+

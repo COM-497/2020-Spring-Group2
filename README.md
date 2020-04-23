@@ -1,4 +1,12 @@
 # 2020-Spring-Group
+The Finished Product is now on the Master Branch. All details of the project can be found in both the comments of the files and the final project paper. 
+
+
+<br />
+<br />
+<br />
+
+# 2020-Spring-Group
 To-Do List April 15th: 
 
 #For Login- 
